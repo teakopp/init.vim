@@ -215,6 +215,7 @@ map <F2> :NERDTreeToggle<CR>
 :tnoremap <Esc> <C-\><C-n>
 
 " treesitter modules
+" Consistent syntax highlighting.
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -225,6 +226,25 @@ require'nvim-treesitter.configs'.setup {
 }
 
 EOF
+
+" Incremental selection based on the named nodes from the grammar.
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+}
+EOF
+ 
+" Tree-sitter based folding.
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 
 " With this function you can reuse the same terminal in neovim.
 " You can toggle the terminal and also send a command to the same terminal.
