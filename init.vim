@@ -319,3 +319,14 @@ tnoremap <F7> <C-\><C-n>:call MonkeyTerminalToggle()<cr>
         autocmd FileType go nnoremap <F5> :call MonkeyTerminalExec('go run ' . expand('%'))<cr>
     augroup END
 
+" Comment out multiple lines
+vnoremap <silent> ;/ :call ToggleComment()<cr>
+
+function! ToggleComment()
+        if matchstr(getline(line(".")),'^\s*\/\/.*$') == ''
+                :execute "s:^://:"
+        else
+                :execute "s:^\s*//::"
+        endif
+endfunction
+
