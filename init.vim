@@ -24,6 +24,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'junegunn/vim-peekaboo'
 
+Plug 'tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
 
