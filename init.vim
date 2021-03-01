@@ -22,6 +22,8 @@ Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'junegunn/vim-peekaboo'
+
 " Initialize plugin system
 call plug#end()
 
@@ -196,9 +198,9 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " Indentation
-" :set smartindent
-" :set autoindent
-
+:set shiftwidth=2
+:set autoindent
+:set smartindent
 
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * silent NERDTreeMirror
