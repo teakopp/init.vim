@@ -26,6 +26,9 @@ Plug 'junegunn/vim-peekaboo'
 
 Plug 'tpope/vim-fugitive'
 
+" Yarn and Node must be installed 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 " Initialize plugin system
 call plug#end()
 
