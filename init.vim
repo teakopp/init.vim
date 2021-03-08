@@ -29,6 +29,12 @@ Plug 'tpope/vim-fugitive'
 " Yarn and Node must be installed 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+Plug 'tpope/vim-surround' 
+
+Plug 'mbbill/undotree'
+
+Plug 'vim-test/vim-test'
+
 " Initialize plugin system
 call plug#end()
 
@@ -337,3 +343,19 @@ function! ToggleComment()
         endif
 endfunction
 
+" Toggles Undo Tree
+nnoremap <F5> :UndotreeToggle<CR>
+
+" Mappings for vim-test
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" Turns off current highlighting :nohl
+:map <F4> :nohl<CR>
+
+" make test commands execute using dispatch.vim
+let test#strategy = "neovim"
