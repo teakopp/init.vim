@@ -35,6 +35,10 @@ Plug 'mbbill/undotree'
 
 Plug 'vim-test/vim-test'
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system
 call plug#end()
 
@@ -359,3 +363,6 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 " make test commands execute using dispatch.vim
 let test#strategy = "neovim"
+
+" Airline theme
+let g:airline_theme='term'
