@@ -39,6 +39,8 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -365,4 +367,8 @@ nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "neovim"
 
 " Airline theme
-let g:airline_theme='term'
+let g:airline_theme='purify'
+
+" Theme
+syntax on " This is required
+colorscheme purify
