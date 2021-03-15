@@ -16,6 +16,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'junegunn/fzf.vim'
 
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+
 Plug 'liuchengxu/vista.vim'
 
 Plug 'dense-analysis/ale'
