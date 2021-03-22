@@ -41,6 +41,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
+Plug 'preservim/nerdcommenter'
+
 " Initialize plugin system
 call plug#end()
 
