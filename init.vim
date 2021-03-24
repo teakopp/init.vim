@@ -35,7 +35,7 @@ Plug 'mbbill/undotree'
 
 Plug 'vim-test/vim-test'
 
-Plug 'vim-airline/vim-airline'
+ Plug 'itchyny/lightline.vim'
 
 Plug 'vim-airline/vim-airline-themes'
 
@@ -369,7 +369,9 @@ nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "neovim"
 
 " Airline theme
-let g:airline_theme='purify'
+let g:lightline = {
+      \ 'colorscheme': 'purify',
+      \ }
 
 " Theme
 syntax on " This is required
